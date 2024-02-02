@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./Assests/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Style.css" />
+    <title>Spotify - Web Player:Music for everyone</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="sideBar">
+        <div class="upperBar">
+          <div class="options">
+            <div class="options-option" class="home">
+              <i class="fa-solid fa-house" style="color: #fff"></i>
+              <a href="#">Home</a>
+            </div>
+            <div class="options-option" id="search">
+              <i
+                class="fa-solid fa-magnifying-glass"
+              ></i>
+              <a href="#">Search</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="part3"></div> -->
+        <div class="lowerBar">
+          <div class="library">
+            <div class="lib-btn">
+              <button type="button" class="custom-btn">
+                <img src="./Assests/library_icon.png" alt="Library Icon " />
+                Your Library
+              </button>
+            </div>
+            <div class="lib-btns">
+              <button class="btn">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button class="btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="playlists">
+          <button><span>Playlists</span></button>
+          <button><span>Artists</span></button>
+          <button><span>Albums</span></button>
+          </div>
+          <div class="songs">
+            <div class="searchBar">
+              <button class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button class="Recent">
+                Recents<i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+            <div class="lists">
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://misc.scdn.co/liked-songs/liked-songs-640.png"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Liked Songs</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Playlist • 3 songs</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://i.scdn.co/image/ab67706f00000002c9635bc997e20d94d7be498c"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Hot Hits Pakistan</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Playlist • Spotify</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b273c15996961322cdebc37976e4"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>NO LOVE</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Album • Shubh</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b273778d1df115679f85768bed2f"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Bikhra</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Album • 3 Abdul Hannan</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                style="list-style-type: none"
+                class="song-container"
+                id="artists"
+              >
+                <img
+                  src="https://i.scdn.co/image/ab6761610000e5eb0c8eb928813cd06614c0710d"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Selena Gomez</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Artist</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                style="list-style-type: none"
+                class="song-container"
+                id="artists"
+              >
+                <img
+                  src="https://i.scdn.co/image/ab6761610000e5ebc40600e02356cc86f0debe84"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Atif Aslam</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Artist</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://mosaic.scdn.co/640/ab67616d00001e02707ea5b8023ac77d31756ed4ab67616d00001e02a2055e0b847ff66fb5206099ab67616d00001e02a58a09b161c806587fe97b6eab67616d00001e02b22e21de789378f223e1795f"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Liked Songs</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Playlist • 3 songs</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://misc.scdn.co/liked-songs/liked-songs-640.png"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>All the time best BOLLYWOOD songs</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Playlist • Ankur Pansare</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://misc.scdn.co/liked-songs/liked-songs-640.png"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Liked Songs</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Playlist • 3 songs</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li style="list-style-type: none" class="song-container">
+                <img
+                  src="https://misc.scdn.co/liked-songs/liked-songs-640.png"
+                  alt="liked-songs"
+                />
+                <div class="text-container">
+                  <div class="text-box">
+                    <div class="top-text">
+                      <a href=""><p>Liked Songs</p></a>
+                    </div>
+                    <div class="bot-text">
+                      <span><p>Playlist • 3 songs</p></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainContent">
+        <div class="stickyNav">
+          <div class="navIcons">
+            <button>
+              <img src="./Assests/backward_icon.png" alt="" id="nav-Icons" />
+            </button>
+            <button class="hide">
+              <img src="./Assests/forward_icon.png" alt="" id="nav-Icons" />
+            </button>
+          </div>
+          <div class="items">
+            <span class="hide"
+              ><button class="badge" id="Explore">Explore Premium</button></span
+            >
+            <span
+              ><button class="badge" id="Install">
+                <i class="fa-regular fa-circle-down"></i>Install Apps
+              </button></span
+            >
+            <div class="badges-right">
+              <button type="icon">
+                <i class="fa-regular fa-bell" style="opacity: 0.8"></i>
+              </button>
+            </div>
+            <div class="badges-right">
+              <button type="icon"><i class="fa-regular fa-user"></i></button>
+            </div>
+          </div>
+        </div>
+      <div class="main-container">
+        <div class="main-content">
+          <div class="section">
+            <div class="headings">
+              <h2>Recently played</h2>
+              <span><a href="">show all</a></span>
+            </div>
+            <div class="cards">
+              <div class="inner">
+                <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                  alt="song-picture"
+                  class="images-song">
+                <div class="detail">
+                  <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                  <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+                </div>
+              </div>
+            <div class="inner">
+              <img src="https://i.scdn.co/image/ab67616d00001e02c15996961322cdebc37976e4"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">No Love</a></div>
+                <div class="singer"><a href="" class="singer">Shubh</a></div>
+              </div>
+            </div> 
+            <div class="inner" id="max-two">
+              <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+              </div>
+            </div> 
+            <div class="inner" id="max-three">
+              <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+              </div>
+            </div> 
+            <div class="inner" id="max-four">
+              <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+              </div>
+            </div> 
+            </div>
+          </div>
+          <div class="section">
+            <div class="headings">
+              <h2>Made</h2>
+              <span><a href="">show all</a></span>
+            </div>
+            <div class="cards">
+              <div class="inner">
+                <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                  alt="song-picture"
+                  class="images-song">
+                <div class="detail">
+                  <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                  <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+                </div>
+              </div>
+            <div class="inner">
+              <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+              </div>
+            </div> 
+            <div class="inner" id="max-two">
+              <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+              </div>
+            </div> 
+            <div class="inner" id="max-three">
+              <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+              </div>
+            </div> 
+            <div class="inner" id="max-four">
+              <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68"
+                alt="song-picture"
+                class="images-song">
+              <div class="detail">
+                <div class="song-title"><a href="" class="song-title">Tera Mera Pyaar(From Ishq Murshid)</a></div>
+                <div class="singer"><a href="" class="singer">Ahmed Jahanzaib</a></div>
+              </div>
+            </div> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="musicPlayer">
+      <div class="left">
+        <div class="currentLogo">
+          <img src="https://i.scdn.co/image/ab67616d00001e029ba9f91ab250b7d756b61a68" alt="">
+        </div>
+        <div class="currentDetail">
+          <div class="currentTitle"><a href="" >Tera Mera Pyaar(From Ishq Murshid)</a></div>
+          <div class="currentSinger"><a href="" >Ahmed Jahanzaib</a></div>
+        </div>
+        <div class="like" style="padding: 0px 8px;">
+          <i ><img src="./Homework Assets/album_icon1.png" alt="" style="height: 16px ; width: 16px;"></i>
+        </div>
+      </div>
+      <div class="mid">
+        <div class="midUpper">
+          <div class="midLeft">
+            <div class="musicPlayerIcons"  id="lightIcons">
+              <img src="./Assests/player_icon1.png" alt=""  class="musicPlayerIMG">
+            </div>
+            <div class="musicPlayerIcons">
+              <img src="./Assests/player_icon2.png" alt="" class="musicPlayerIMG">
+            </div>
+          </div>
+          <div class="midMid">
+              <div class="musicPlayerIcons" >
+              <img src="./Assests/player_icon3.png" alt="" class="musicPlayerIMG" style="width: 32px; height: 32px;">
+            </div>
+          </div>
+          <div class="midRight">
+            <div class="musicPlayerIcons"  >
+              <img src="./Assests/player_icon4.png" alt=""  class="musicPlayerIMG">
+            </div>
+            <div class="musicPlayerIcons"id="lightIcons">
+              <img src="./Assests/player_icon5.png" alt="" class="musicPlayerIMG">
+            </div>
+        </div>
+        </div> 
+        <div class="playBar">
+          <div  class="time">0:00</div>
+          <div class="Bar"></div>
+          <div class="time">4:00</div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="musicPlayerIcons"  id="lightIcons" >
+          <i><img src="./Homework Assets/controls_icon1.png" alt="" style="height: 40px;"  ></i>
+        </div>
+        <div class="musicPlayerIcons"  >
+          <img src="./Homework Assets/controls_icon3.png" alt=""  class="musicPlayerIMG" style="height: 18px; width: 18px;">
+        </div>
+
+        <div class="musicPlayerIcons" style="padding: 8px 0px;"  >
+          <img src="./Homework Assets/controls_icon4.png" alt=""  class="musicPlayerIMG">
+        </div>
+        <div class="musicPlayerIcons1">
+          <i><img src="./Homework Assets/controls_icon5.png" alt=""   style="height: 32px; width: 32px; color: #b3b3b3b3; cursor: pointer; " ></i>
+        </div>
+        <div class="soundbar"></div>
+      </div>
+    </div>
+  </body>
+</html>

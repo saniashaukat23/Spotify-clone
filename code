@@ -1,0 +1,195 @@
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+.heading p {
+  color: #ffff;
+  font-size: 24px;
+  margin: 0px;
+  font-weight: 700;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: -1px;
+}
+
+.main-container {
+  padding-top: 8px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0px 20px;
+}
+.images-song {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Create 5 equal-width columns */
+  gap: 24px;
+}
+.inner {
+  height: 252px;
+  width: 175px;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #181818;
+}
+.song-title {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  padding: 0px 0px 4px;
+}
+.singer {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 14px;
+  position: relative;
+  font-weight: 500;
+  pointer-events: cursor;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+.section1 {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.heading {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.heading-top {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.heading-top p {
+  pointer-events: cursor;
+  font-size: 24px;
+  letter-spacing: -2;
+  margin: 0px;
+  font-weight: 700;
+}
+
+.heading P {
+  pointer-events: cursor;
+  font-size: 24px;
+  letter-spacing: -2;
+  margin: 0px;
+  font-weight: 700;
+}
+.heading a {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section2-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Create 5 equal-width columns */
+  grid-gap: 16px;
+}
+
+.songs::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+.songs::-webkit-scrollbar-thumb {
+  background-color: #121212; /* Color of the thumb */
+}
+.songs::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b3b3b3;
+}
+.mainContent::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+  background-color: #121212; /* Color of the thumb */
+}
+.mainContent::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b3b3b3;
+}
+@media (max-width: 1115px) {
+  .inner {
+    height: 252px;
+    width: 174px;
+  }
+  .sideBar {
+    width: 281px;
+  }
+}
+@media (max-width: 1000px) {
+  .inner {
+    height: 285px;
+    width: 207px;
+  }
+  .sideBar {
+    width: 280px;
+  }
+  .section2-cards {
+    grid-gap: var(--grid-gap);
+    gap: 18px;
+    width: 100%;
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    ); /* Create 5 equal-width columns */
+  }
+  .cards {
+    grid-gap: var(--grid-gap);
+    gap: 18px;
+    width: 100%;
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    ); /* Create 5 equal-width columns */
+    grid-auto-rows: 0;
+    grid-template-rows: 1fr;
+  }
+  #max-three {
+    display: none;
+  }
+  .images-song {
+    height: 175px;
+    width: 175px;
+  }
+  .content {
+    padding: 0px 18px;
+  }
+  .mainContent {
+    padding-right: 0px;
+  }
+}
+@media (max-width: 1115px) {
+  #max-four {
+    display: none;
+  }
+}

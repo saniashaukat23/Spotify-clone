@@ -1,0 +1,870 @@
+body {
+  font-family: var(
+    --font-family,
+    CircularSp,
+    CircularSp-Arab,
+    CircularSp-Hebr,
+    CircularSp-Cyrl,
+    CircularSp-Grek,
+    CircularSp-Deva,
+    var(--fallback-fonts, sans-serif)
+  );
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: var(
+    --font-family,
+    CircularSp,
+    CircularSp-Arab,
+    CircularSp-Hebr,
+    CircularSp-Cyrl,
+    CircularSp-Grek,
+    CircularSp-Deva,
+    var(--fallback-fonts, sans-serif)
+  ); */
+}
+
+.main {
+  position: fixed;
+  column-gap: 9px;
+  overflow-x: hidden;
+  display: flex;
+  height: 90vh;
+  padding: 8px;
+}
+
+.sideBar {
+  background-color: #0000;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  height: 85vh;
+}
+.musicPlayer {
+  background-color: black;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 4rem;
+}
+.singer {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.navIcons button {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
+}
+.mainContent {
+  border-radius: 0.5rem;
+  padding: 0px;
+
+  background-color: #121212;
+  flex: 1;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 85vh;
+}
+.lowerBar {
+  border-radius: 0.5rem;
+  background-color: #121212;
+  height: 85vh;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.options-option {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+.options-option a,
+.options-option i {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+/* .home {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  gap: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  padding: 4px 12px;
+  gap: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+} */
+/*  */
+.search a,
+.search i {
+  color: #555;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  margin: 0px;
+  flex: 1;
+  border-radius: 0.5rem;
+  background-color: #121212;
+}
+.lib-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.custom-btn {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  gap: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  height: 40px;
+  color: #b3b3b3b3;
+  /* margin-right: 4.5rem; */
+  /* Add any other custom styles you want */
+}
+
+.library {
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  /* gap: 6px; */
+  color: #b3b3b3b3;
+}
+.custom-btn img {
+  height: 1.25rem;
+  width: 1.25rem;
+  opacity: 0.6;
+}
+.btn {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  gap: 1rem;
+  display: flex;
+  color: #555;
+}
+.fa-solid,
+.fa-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #a7a7a7;
+}
+
+.playlists button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  background-color: #ffffff12;
+  border-radius: 9999px;
+  height: 2rem;
+}
+.playlists button span {
+  font-weight: 400;
+  color: #ffff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+.playlists {
+  display: flex;
+  flex: 1;
+  padding-top: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 1;
+  position: relative;
+  left: 0.75rem;
+  gap: 5px;
+}
+.searchBar {
+  padding: 2px 0px 0px 8px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #555;
+}
+.search-icon {
+  border: none;
+  color: #555;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1rem;
+}
+.section {
+  margin-bottom: 1rem;
+}
+.Recent {
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 13px;
+  gap: 8px;
+}
+.Recent i {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  border: none;
+  color: #555;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1rem;
+}
+.songs {
+  padding: 0px 0px 0px 8px;
+  /* overflow-y: scroll; */
+  scroll-behavior: auto;
+  scroll-padding: 0px;
+  scrollbar-color: #b3b3b3b3;
+  overflow: auto;
+  max-height: 370px;
+  border-radius: 0.5rem;
+  height: 324px;
+}
+#artists img {
+  border-radius: 50%;
+}
+li img {
+  height: 48px;
+  width: 3rem;
+  border-radius: 6px;
+}
+.artist {
+  height: 48px;
+  width: 3rem;
+  border-radius: 50%;
+}
+.songs li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+div.top-text p {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.bot-text p {
+  margin: 0px;
+  font-size: 13px;
+
+  opacity: 0.7;
+  color: #b3b3b3;
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3px;
+}
+.text-container {
+  width: 260px;
+}
+.song-container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stickyNav {
+  position: sticky;
+  contain: content;
+  top: 0;
+  background-color: #121212;
+  padding: 1rem 0rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 9999px;
+  height: 65px;
+  z-index: 100;
+}
+
+.navIcons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.navIcons button {
+  border: none;
+  padding: 0;
+  background: none;
+  position: relative;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  align-items: center;
+}
+#nav-Icons {
+  color: #ffff;
+  opacity: 2;
+  height: 16px;
+  width: 16px;
+}
+.items {
+  display: flex;
+  width: 365;
+  gap: 8px;
+
+  font-size: 14px;
+}
+.badge {
+  border: none;
+  padding: 0;
+  background: none;
+  position: relative;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  transition-duration: 33ms;
+  transition-property: background-color, border-color, color, box-shadow, filter,
+    transform;
+  user-select: none;
+  vertical-align: middle;
+  transform: translate3d(0px, 0px, 0px);
+  padding: 0px;
+  min-inline-size: 0px;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffff;
+  height: 32px;
+  width: 132px;
+}
+.badges-right button {
+  border: none;
+  padding: 0;
+  background: none;
+  position: relative;
+  color: #ffff;
+
+  cursor: pointer;
+}
+#Explore {
+  background-color: #ffff;
+  color: black;
+  font-weight: 700;
+  border-radius: 9999px;
+  letter-spacing: -0.5px;
+}
+#Install {
+  border-radius: 9999px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.badge i {
+  height: 16px;
+  width: 16px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.badges-right {
+  height: 32px;
+  width: 32px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 5 equal-width columns */
+  gap: 24px;
+}
+.inner {
+  background-color: #18181818;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #181818;
+  border-radius: 8px;
+  -ms-flex: 1;
+  cursor: pointer;
+  flex: 1;
+  isolation: isolate;
+  padding: 16px;
+  position: relative;
+
+  width: 100%;
+}
+.main-container {
+  padding-top: 0.5rem;
+  background: transparent;
+}
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+h2:hover {
+  text-decoration: underline;
+}
+.images-song {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.headings {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headings a {
+  font-size: 0.825rem;
+  opacity: 0.7;
+}
+/* .headings a :hover {
+  text-decoration: underline;
+  transition-delay: 0.3s;
+  transition: ease;
+}
+.singer:hover {
+  text-decoration: underline;
+  transition-delay: 0.3s;
+  transition: ease;
+}
+
+#search i,
+#search a {
+  opacity: 0.7;
+}
+#search a:hover {
+  opacity: 1;
+  transition-delay: 0.3s;
+  transition: ease;
+}
+#search a:hover #search i {
+  opacity: 1;
+  transition-delay: 0.3s;
+  transition: ease;
+}
+
+.custom-btn:hover {
+  color: #ffff; /* Change text color on hover */
+
+/* .btn i:hover {
+  transition-delay: 0.3s;
+  transition: ease;
+  color: #ffff;
+  opacity: 1;
+} */
+
+.custom-btn:hover img {
+  opacity: 1;
+}
+.main-content {
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.song-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.song-title {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 26px;
+  padding: 0px 0px 4px;
+  margin: 0px;
+  max-width: 140px;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 62px;
+}
+.text-box {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.song-container {
+  overflow: hidden;
+}
+.currentDetail {
+  overflow: hidden;
+}
+
+.singer {
+  text-decoration: none;
+
+  color: #b3b3b3;
+  font-size: 0.825rem;
+  font-weight: 700;
+  margin: 0px;
+}
+@media (max-width: 1115px) {
+  #max-four {
+    display: none;
+  }
+}
+@media (min-width: 1116px) {
+  .cards {
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal-width columns */
+  }
+}
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* Create 5 equal-width columns */
+    gap: 18px;
+  }
+}
+@media (max-width: 1000px) {
+  #max-three {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  #max-two {
+    display: none;
+  }
+}
+.songs::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+.songs::-webkit-scrollbar-thumb {
+  background-color: #121212; /* Color of the thumb */
+}
+.songs::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b3b3b3;
+}
+.mainContent::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+  background-color: #121212; /* Color of the thumb */
+}
+.mainContent::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b3b3b3;
+}
+.inner:hover {
+  background-color: #333333b3;
+  transition: background-color 0.3s ease;
+}
+/* Common styles for links with underline on hover */
+.headings a:hover,
+.singer:hover {
+  text-decoration: underline;
+  transition-delay: 0.3s;
+  transition: ease;
+}
+
+/* Styles for the search icon and links */
+#search i,
+#search a {
+  opacity: 0.7;
+}
+
+#search a:hover {
+  opacity: 1;
+  transition-delay: 0.3s;
+  transition: ease;
+}
+#search a:hover i {
+  opacity: 1;
+  color: #ffff;
+  transition-delay: 0.3s;
+  transition: ease;
+}
+/* Styles for buttons with white text on hover */
+.custom-btn:hover {
+  color: #ffff;
+}
+
+/* Styles for buttons with icon on hover */
+.btn:hover {
+  background-color: #bebebe17;
+  transition: ease;
+  transition-delay: 0.1s;
+  padding: none;
+  border: 0px;
+  border-radius: 9999px;
+  opacity: 0.9;
+}
+
+/* Styles for images inside custom-btn on hover */
+.custom-btn:hover img {
+  opacity: 1;
+}
+.playlists button:hover {
+  transition: ease;
+  transition-delay: 0.2s;
+  background-color: #ffffff25;
+}
+.song-container:hover {
+  background-color: #ffffff12;
+  border-radius: 0.4rem;
+}
+
+.Recent:hover {
+  color: #ffff;
+  transition: ease-out 0.1s;
+  font-size: 13.2px; /* Combine transition properties */
+}
+.Recent:hover i {
+  color: #ffff;
+  transition: ease-out 0.1s;
+  font-size: 16.2px; /* Combine transition properties */
+}
+.search-icon:hover {
+  transition: ease;
+  transition-delay: 0.1s;
+  background-color: #ffffff28;
+  border-radius: 9999px;
+}
+.badge:hover {
+  transition: ease-out;
+  transition-delay: 0.1s;
+  font-size: 14px;
+  width: 134px;
+  height: 33px;
+  font-weight: 600;
+}
+.badges-right:hover {
+  height: 32.5px;
+  width: 32.5px;
+}
+.musicPlayer {
+  height: 72px;
+  display: flex;
+}
+.currentLogo img {
+  height: 56px;
+  width: 56px;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  display: flex;
+  width: 30%;
+  padding-left: 8px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.currentTitle {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0px 12px 0px 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.currentDetail {
+  margin: 0px 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.currentSinger {
+  font-size: 12px;
+  opacity: 0.7;
+  padding: 0px 12px 0px 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.midUpper {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.right {
+  width: 30%;
+}
+.musicPlayerIcons {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.musicPlayerIMG {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.musicPlayerIMG:hover {
+  color: #ffff;
+  opacity: 1;
+}
+.musicPlayerIcons1:hover {
+  color: #ffff;
+  opacity: 1;
+}
+
+.midLeft {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.midRight {
+  display: flex;
+  justify-content: start;
+}
+#lightIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.playBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.Bar {
+  width: 75%;
+  height: 4px;
+  background-color: #3f3f3f;
+  border-radius: 1.5px;
+}
+.time {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--text-subdued, #6a6a6a);
+}
+.musicPlayerIcons i img {
+  height: 3rem;
+  cursor: pointer;
+  padding: 0px;
+  width: 2rem;
+  background: none;
+}
+.right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.soundbar {
+  width: 93px;
+  height: 4px;
+  background-color: white;
+  margin-right: 16px;
+  border-radius: 3px;
+}
+@media (max-width: 750px) {
+  .musicPlayer {
+    position: fixed;
+    flex: 1;
+  }
+  .right {
+    display: none;
+  }
+}
